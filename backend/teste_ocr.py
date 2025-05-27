@@ -4,12 +4,12 @@ import numpy as np
 from PIL import Image
 
 # Carrega a imagem local
-image_path = "palavra.png"
+image_path = "../frontend/assets/word.png"
 with open(image_path, "rb") as f:
     image_bytes = f.read()
 
 # Envia para o backend
-response = requests.post("http://127.0.0.1:5000/ocr", files={"image": ("palavra.png", image_bytes)})
+response = requests.post("http://127.0.0.1:5000/ocr", files={"image": ("word.png", image_bytes)})
 
 # Imprime o resultado
 print(response.json())
